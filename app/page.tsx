@@ -1,103 +1,68 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-white to-gray-50">
+      {/* Hero */}
+      <section className="flex flex-col items-center text-center py-24 px-6">
+        <h1 className="text-5xl font-bold text-gray-900">
+          Welcome to <span className="text-blue-600">Kwanafo Agency</span>
+        </h1>
+        <p className="mt-6 text-lg text-gray-600 max-w-xl">
+          AI-powered voice solutions to help your business communicate smarter,
+          faster, and better.
+        </p>
+        <div className="mt-8 flex gap-4">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#features"
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Get Started
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+            className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition"
           >
-            Read our docs
+            Learn More
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Features */}
+      <section id="features" className="py-20 px-6 max-w-5xl">
+        <div className="grid md:grid-cols-3 gap-12 text-center">
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900">Smart Automation</h3>
+            <p className="mt-2 text-gray-600">
+              Automate client interactions with AI-driven voice responses.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900">Seamless Integration</h3>
+            <p className="mt-2 text-gray-600">
+              Connect directly with your favorite tools and CRMs.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900">24/7 Availability</h3>
+            <p className="mt-2 text-gray-600">
+              Provide customer support around the clock without extra cost.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call-to-Action */}
+      <section id="contact" className="w-full bg-blue-600 text-white py-16 text-center">
+        <h2 className="text-3xl font-semibold">Ready to transform your business?</h2>
+        <p className="mt-4 text-lg">Contact Kwanafo Agency today and let’s get started.</p>
+        <button className="mt-6 px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition">
+          Get in Touch
+        </button>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full text-center py-6 text-gray-500 text-sm">
+        © {new Date().getFullYear()} Kwanafo Agency. All rights reserved.
       </footer>
-    </div>
+    </main>
   );
 }
